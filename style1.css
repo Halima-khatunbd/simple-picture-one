@@ -1,0 +1,44 @@
+.box-one, .box-two,  .box-three, .box-four, .box-five, .box-six{
+    background-color: orange;
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 5px;
+}
+.box-one{
+    grid-area: header;
+}
+.box-two{
+    grid-area: nav;
+    }
+.box-three{
+    grid-area: main;
+}
+.box-four{
+    grid-area: box-four;
+    }
+.box-five{
+grid-area: box-five;
+
+}
+.box-six{
+    grid-area: box-six;
+}
+.box{
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "header   header   header   header"
+    "nav      main     main     box-four"
+    "nav      main     main     box-five"
+    "box-six  box-six  box-six  box-six"
+}
+
+@media screen and {max-width: 576px;
+    .box{grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "box-four"
+    }
+    
+}
